@@ -7,6 +7,11 @@ logger.setLevel(logging.INFO)
 
 class Timer:
     def __init__(self, log=True):
+        """Initialize the class .
+
+        Args:
+            log (bool, optional): If true, timer will log info on start/stop. Defaults to True.
+        """
         self.log = log
     def start(self, task='Unnamed Task'):
         """Starts the timer .
