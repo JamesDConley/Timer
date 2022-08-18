@@ -8,14 +8,12 @@ logger.setLevel(logging.INFO)
 class Timer:
     def __init__(self, log=True):
         """Initialize the class .
-
         Args:
             log (bool, optional): If true, timer will log info on start/stop. Defaults to True.
         """
         self.log = log
     def start(self, task='Unnamed Task'):
         """Starts the timer .
-
         Args:
             task (str, optional): Name of the task to use for logging. Defaults to 'Unnamed Task'.
         """
@@ -39,7 +37,6 @@ class Timer:
     
     def stop(self):
         """Stops returns the time elapsed since timer was last started, logging the time if self.log is True .
-
         Returns:
             float: seconds elapsed since last timer start
         """
@@ -53,7 +50,6 @@ class Timer:
         else:
             units = 'seconds'
             divisor = 1
-        if log:
+        if self.log:
             logger.info(f"{self.task} finished after {round(self.total_time/divisor, 2)} {units}")
         return self.total_time
-    
